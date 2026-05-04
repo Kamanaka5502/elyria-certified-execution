@@ -12,7 +12,7 @@ Copyright (c) 2026 **Samantha Revita** and **Terry Snyder**. All rights reserved
 
 This repository is a **protected public proof surface**. It is **not open source**.
 
-![Elyria Certified Execution](assets/elyria_certified_execution_surface.svg)
+![Elyria Certified Execution](assets/elyria_certified_execution_orbital_surface.svg)
 
 ## What this is
 
