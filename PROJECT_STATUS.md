@@ -30,9 +30,14 @@ commercial access posture
 public certification standard
 public validator script
 C5 cross-boundary example receipt
+C4 boundary-enforced example receipt
+C2 receipt-bearing example receipt
 validator tests
 GitHub Actions proof workflow
 proof run guide
+release notes
+sample certification report
+reviewer brief
 project status
 ```
 
@@ -41,6 +46,8 @@ project status
 ```text
 certify.py
 examples/c5_cross_boundary_receipt.json
+examples/c4_boundary_enforced_receipt.json
+examples/c2_receipt_bearing_receipt.json
 test_certify.py
 requirements.txt
 .github/workflows/proof.yml
@@ -51,6 +58,10 @@ requirements.txt
 ```bash
 python certify.py examples/c5_cross_boundary_receipt.json
 python certify.py examples/c5_cross_boundary_receipt.json --compact
+python certify.py examples/c4_boundary_enforced_receipt.json
+python certify.py examples/c4_boundary_enforced_receipt.json --compact
+python certify.py examples/c2_receipt_bearing_receipt.json
+python certify.py examples/c2_receipt_bearing_receipt.json --compact
 python test_certify.py
 ```
 
@@ -80,6 +91,8 @@ Fail-Closed Proof
 
 ```text
 public C5 receipt validates as Cross-Boundary Certified Execution
+public C4 receipt validates as Boundary-Enforced Execution
+public C2 receipt validates as Receipt-Bearing Execution without overclaiming
 empty receipt falls to C0
 missing structured fields falls to C1
 missing proof classes falls to C2
@@ -109,6 +122,8 @@ safe visual surface
 public certification levels
 public proof requirements
 synthetic C5 receipt
+synthetic C4 receipt
+synthetic C2 receipt
 public validator
 receipt/replay demonstration
 protected-scope notices
@@ -145,11 +160,10 @@ production deployment architecture
 ## Next development lanes
 
 ```text
-1. add RELEASE_NOTES.md for v0.1 public proof surface
-2. add SAMPLE_CERTIFICATION_REPORT.md public-safe template
-3. add C4 boundary-enforced example receipt
-4. add C2 receipt-bearing example receipt
-5. pause before adding any customer-specific material
+1. add C1 logged-execution example only if needed
+2. add C0 claim-only example only if needed
+3. add public certification matrix only if needed
+4. pause before adding any customer-specific material
 ```
 
 ## Category statement
