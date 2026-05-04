@@ -12,6 +12,7 @@ from pathlib import Path
 from certify import certify, load_json
 
 
+EXAMPLE_C2 = Path("examples/c2_receipt_bearing_receipt.json")
 EXAMPLE_C4 = Path("examples/c4_boundary_enforced_receipt.json")
 EXAMPLE_C5 = Path("examples/c5_cross_boundary_receipt.json")
 
@@ -40,6 +41,20 @@ def test_c4_boundary_enforced_receipt_certifies():
     assert result.missing_proofs == []
     assert result.decision_hash
     assert result.certification_hash
+
+
+def test_c2_receipt_bearing_example_classifies_as_c2():
+    receipt = load_json(EXAMPLE_C2)
+    result = certify(receipt)
+
+    assert result.passed is False
+    assert result.certification_level == "C2"
+    assert result.level_name == "Receipt-Bearing Execution"
+    assert result.missing_fields == []
+    assert "standing_proof" in result.missing_proofs
+    assert "authority_proof" in result.missing_proofs
+    assert "replay_verification_proof" in result.missing_proofs
+    assert "fail_closed_proof" in result.missing_proofs
 
 
 def test_empty_receipt_is_c0():
