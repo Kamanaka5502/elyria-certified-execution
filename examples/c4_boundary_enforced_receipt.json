@@ -1,0 +1,41 @@
+{
+  "receipt_id": "ELYRIA-CERT-EXAMPLE-C4-001",
+  "system_id": "synthetic-single-boundary-agent-system",
+  "action_id": "synthetic-agent-tool-call-001",
+  "consequence_type": "single_boundary_ai_action",
+  "boundary_time": "2026-05-04T00:00:00Z",
+  "decision": "ADMIT",
+  "state_hash": "synthetic-state-hash-c4",
+  "authority_hash": "synthetic-authority-hash-c4",
+  "standing_hash": "synthetic-standing-hash-c4",
+  "corridor_hash": "not-cross-boundary",
+  "law_bundle_hash": "synthetic-law-bundle-hash-c4",
+  "rule_trace_hash": "synthetic-rule-trace-hash-c4",
+  "outcome_hash": "synthetic-outcome-hash-c4",
+  "fail_closed_outcome": "REFUSE_IF_STANDING_LOST",
+  "replay_token": "synthetic-replay-token-c4",
+  "boundary_enforced": true,
+  "cross_boundary": false,
+  "proofs": {
+    "standing_proof": {
+      "status": "PASS",
+      "summary": "Proposed consequence has standing at bind-time inside one synthetic boundary."
+    },
+    "authority_proof": {
+      "status": "PASS",
+      "summary": "Synthetic actor authority is live, scoped, and non-revoked."
+    },
+    "receipt_integrity_proof": {
+      "status": "PASS",
+      "summary": "Synthetic receipt includes required structured evidence fields."
+    },
+    "replay_verification_proof": {
+      "status": "PASS",
+      "summary": "Synthetic replay token is present for deterministic verification."
+    },
+    "fail_closed_proof": {
+      "status": "PASS",
+      "summary": "Synthetic failure mode refuses consequence if standing is lost."
+    }
+  }
+}
