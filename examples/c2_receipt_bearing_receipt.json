@@ -1,0 +1,41 @@
+{
+  "receipt_id": "ELYRIA-CERT-EXAMPLE-C2-001",
+  "system_id": "synthetic-receipt-bearing-system",
+  "action_id": "synthetic-logged-ai-action-001",
+  "consequence_type": "single_boundary_ai_action",
+  "boundary_time": "2026-05-04T00:00:00Z",
+  "decision": "ADMIT",
+  "state_hash": "synthetic-state-hash-c2",
+  "authority_hash": "synthetic-authority-hash-c2",
+  "standing_hash": "synthetic-standing-hash-c2",
+  "corridor_hash": "not-cross-boundary",
+  "law_bundle_hash": "synthetic-law-bundle-hash-c2",
+  "rule_trace_hash": "synthetic-rule-trace-hash-c2",
+  "outcome_hash": "synthetic-outcome-hash-c2",
+  "fail_closed_outcome": "NOT_PROVEN",
+  "replay_token": "synthetic-replay-token-c2",
+  "boundary_enforced": false,
+  "cross_boundary": false,
+  "proofs": {
+    "standing_proof": {
+      "status": "MISSING",
+      "summary": "Standing proof is not present in this C2 example."
+    },
+    "authority_proof": {
+      "status": "MISSING",
+      "summary": "Authority proof is not present in this C2 example."
+    },
+    "receipt_integrity_proof": {
+      "status": "PASS",
+      "summary": "Structured receipt fields are present."
+    },
+    "replay_verification_proof": {
+      "status": "MISSING",
+      "summary": "Replay verification is not present in this C2 example."
+    },
+    "fail_closed_proof": {
+      "status": "MISSING",
+      "summary": "Fail-closed behavior is not proven in this C2 example."
+    }
+  }
+}
