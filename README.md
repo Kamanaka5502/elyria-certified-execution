@@ -5,6 +5,7 @@
 ![Owner](https://img.shields.io/badge/owner-Samantha_Revita_%2B_Terry_Snyder-purple)
 ![System](https://img.shields.io/badge/system-Elyria_Systems--VA-cyan)
 ![Core](https://img.shields.io/badge/core-certified_execution-green)
+[![Elyria Certified Execution Proof](https://github.com/Kamanaka5502/elyria-certified-execution/actions/workflows/proof.yml/badge.svg)](https://github.com/Kamanaka5502/elyria-certified-execution/actions/workflows/proof.yml)
 
 Built by **Elyria Systems — VA**.
 
@@ -31,6 +32,24 @@ receipt-bearing
 replay-verifiable
 fail-closed
 admissible at the boundary where it binds
+```
+
+## Runnable public proof
+
+The first admitted executable surface is a public-safe C5 cross-boundary certification validator.
+
+Run:
+
+```bash
+python certify.py examples/c5_cross_boundary_receipt.json
+python certify.py examples/c5_cross_boundary_receipt.json --compact
+python test_certify.py
+```
+
+Expected certification level:
+
+```text
+C5 — Cross-Boundary Certified Execution
 ```
 
 ## Core rule
