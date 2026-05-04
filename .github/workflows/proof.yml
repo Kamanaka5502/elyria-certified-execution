@@ -35,5 +35,11 @@ jobs:
       - name: Run compact C5 certification validator
         run: python certify.py examples/c5_cross_boundary_receipt.json --compact
 
+      - name: Run C4 certification validator
+        run: python certify.py examples/c4_boundary_enforced_receipt.json
+
+      - name: Run compact C4 certification validator
+        run: python certify.py examples/c4_boundary_enforced_receipt.json --compact
+
       - name: Run certification tests
         run: python test_certify.py
