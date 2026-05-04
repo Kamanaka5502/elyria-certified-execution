@@ -1,0 +1,45 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="core" cx="50%" cy="46%" r="62%">
+      <stop offset="0%" stop-color="#67e8f9" stop-opacity="0.92"/>
+      <stop offset="42%" stop-color="#2563eb" stop-opacity="0.34"/>
+      <stop offset="76%" stop-color="#7c3aed" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rail" x1="170" y1="450" x2="1430" y2="450">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1600" height="900" fill="#020617"/>
+  <rect x="42" y="42" width="1516" height="816" rx="38" stroke="#1e293b" stroke-width="2"/>
+  <circle cx="800" cy="450" r="430" fill="url(#core)" opacity="0.72"/>
+  <g opacity="0.13" stroke="#94a3b8"><path d="M120 160H1480M120 260H1480M120 360H1480M120 460H1480M120 560H1480M120 660H1480M120 760H1480"/><path d="M180 110V800M320 110V800M460 110V800M600 110V800M740 110V800M880 110V800M1020 110V800M1160 110V800M1300 110V800M1440 110V800"/></g>
+  <text x="86" y="96" font-family="Inter, Arial, sans-serif" font-size="34" fill="#e2e8f0" font-weight="900">ELYRIA CERTIFIED EXECUTION</text>
+  <text x="86" y="132" font-family="Inter, Arial, sans-serif" font-size="20" fill="#93c5fd">Consequence-Bearing AI Execution Certification · Elyria Systems — VA · Samantha Revita + Terry Snyder</text>
+  <path d="M210 450H520" stroke="url(#rail)" stroke-width="14" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M1080 450H1390" stroke="url(#rail)" stroke-width="14" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="210" cy="450" r="84" fill="#020617" stroke="#22d3ee" stroke-width="4"/>
+  <circle cx="1390" cy="450" r="84" fill="#020617" stroke="#34d399" stroke-width="4"/>
+  <rect x="520" y="228" width="560" height="380" rx="42" fill="#020617" stroke="#67e8f9" stroke-width="5" filter="url(#glow)"/>
+  <rect x="590" y="295" width="420" height="246" rx="24" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+  <text x="210" y="443" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" fill="#e0f2fe" font-weight="800">CLAIM</text>
+  <text x="210" y="474" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#93c5fd">AI action / system</text>
+  <text x="800" y="342" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" fill="#e2e8f0" font-weight="900">CERTIFICATION BOUNDARY</text>
+  <text x="800" y="382" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="19" fill="#c4b5fd">standing · authority · corridor · receipt · replay · fail-closed</text>
+  <text x="1390" y="443" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" fill="#dcfce7" font-weight="800">CERTIFIED</text>
+  <text x="1390" y="474" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#86efac">C0 → C5</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="16" fill="#cbd5e1">
+    <text x="640" y="435">BOUNDARY STANDING</text>
+    <text x="640" y="465">AUTHORITY PROOF</text>
+    <text x="640" y="495">CORRIDOR PROOF</text>
+    <text x="840" y="435">RECEIPT INTEGRITY</text>
+    <text x="840" y="465">REPLAY VERIFY</text>
+    <text x="840" y="495">FAIL-CLOSED</text>
+  </g>
+  <rect x="150" y="650" width="1300" height="86" rx="22" fill="#020617" stroke="#334155" stroke-width="2"/>
+  <text x="190" y="704" font-family="Times New Roman, serif" font-size="29" fill="#e2e8f0">CertifiedExecution = Standing ∧ Authority ∧ Corridor ∧ Receipt ∧ Replay ∧ FailClosed</text>
+  <text x="130" y="818" font-family="Inter, Arial, sans-serif" font-size="15" fill="#64748b">Public-safe certification surface only. Protected runtime law, private proof methods, customer deployments, and enforcement internals are excluded.</text>
+</svg>
