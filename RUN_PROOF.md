@@ -29,15 +29,12 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-## Run the C5 certification proof
+## Run certification proofs
+
+### C5 cross-boundary certified execution
 
 ```bash
 python certify.py examples/c5_cross_boundary_receipt.json
-```
-
-Compact output:
-
-```bash
 python certify.py examples/c5_cross_boundary_receipt.json --compact
 ```
 
@@ -45,6 +42,32 @@ Expected certification level:
 
 ```text
 C5 — Cross-Boundary Certified Execution
+```
+
+### C4 boundary-enforced execution
+
+```bash
+python certify.py examples/c4_boundary_enforced_receipt.json
+python certify.py examples/c4_boundary_enforced_receipt.json --compact
+```
+
+Expected certification level:
+
+```text
+C4 — Boundary-Enforced Execution
+```
+
+### C2 receipt-bearing execution
+
+```bash
+python certify.py examples/c2_receipt_bearing_receipt.json
+python certify.py examples/c2_receipt_bearing_receipt.json --compact
+```
+
+Expected certification level:
+
+```text
+C2 — Receipt-Bearing Execution
 ```
 
 ## Run tests
@@ -57,6 +80,8 @@ The tests verify:
 
 ```text
 C5 cross-boundary receipt certifies
+C4 boundary-enforced receipt certifies
+C2 receipt-bearing receipt does not overclaim
 empty receipt falls to C0
 missing fields falls to C1
 missing proofs falls to C2
@@ -71,7 +96,7 @@ The repository includes a proof workflow:
 .github/workflows/proof.yml
 ```
 
-It runs the public validator, compact validator output, and test suite on push, pull request, and manual dispatch.
+It runs the public validator across C5, C4, C2, compact outputs, and the test suite on push, pull request, and manual dispatch.
 
 ## Proof principle
 
