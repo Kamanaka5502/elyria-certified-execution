@@ -7,12 +7,12 @@ Public-safe tests for the C0-C5 certification validator.
 """
 from __future__ import annotations
 
-import json
 from pathlib import Path
 
 from certify import certify, load_json
 
 
+EXAMPLE_C4 = Path("examples/c4_boundary_enforced_receipt.json")
 EXAMPLE_C5 = Path("examples/c5_cross_boundary_receipt.json")
 
 
@@ -23,6 +23,19 @@ def test_c5_cross_boundary_receipt_certifies():
     assert result.passed is True
     assert result.certification_level == "C5"
     assert result.level_name == "Cross-Boundary Certified Execution"
+    assert result.missing_fields == []
+    assert result.missing_proofs == []
+    assert result.decision_hash
+    assert result.certification_hash
+
+
+def test_c4_boundary_enforced_receipt_certifies():
+    receipt = load_json(EXAMPLE_C4)
+    result = certify(receipt)
+
+    assert result.passed is True
+    assert result.certification_level == "C4"
+    assert result.level_name == "Boundary-Enforced Execution"
     assert result.missing_fields == []
     assert result.missing_proofs == []
     assert result.decision_hash
