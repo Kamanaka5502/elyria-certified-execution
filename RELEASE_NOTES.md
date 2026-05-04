@@ -17,15 +17,20 @@ OPEN_SOURCE: NO
 
 Elyria Certified Execution is initialized as a protected public proof surface and executable certification standard for consequence-bearing AI execution.
 
-The repository defines C0-C5 certification levels and demonstrates a public-safe C5 cross-boundary certification receipt validated by a deterministic public validator.
+The repository defines C0-C5 certification levels and demonstrates public-safe C2, C4, and C5 certification receipts validated by a deterministic public validator.
 
 ## Active proof surface
 
 ```text
+C2 receipt-bearing execution receipt
+C4 boundary-enforced execution receipt
 C5 cross-boundary certified execution receipt
 public certification validator
 public certification tests
 GitHub Actions proof workflow
+certification matrix
+sample certification report
+reviewer brief
 ```
 
 ## v0.1 proves
@@ -33,10 +38,13 @@ GitHub Actions proof workflow
 ```text
 claim-only systems fall to C0
 logs without structured proof fall to C1
-receipts without proof classes fall to C2
-replay-verifiable and boundary-enforced systems can reach C4
+structured receipts without required proof classes fall to C2
+C2 does not overclaim boundary enforcement or replay completeness
+C4 proves boundary-enforced execution inside one boundary
+C5 proves cross-boundary certified execution with corridor proof
 cross-boundary execution requires corridor proof to reach C5
 C5 requires standing, authority, corridor, receipt, replay, and fail-closed proof
+certification result emits deterministic decision and certification hashes
 ```
 
 ## Certification levels
@@ -55,6 +63,10 @@ C5 — Cross-Boundary Certified Execution
 ```bash
 python certify.py examples/c5_cross_boundary_receipt.json
 python certify.py examples/c5_cross_boundary_receipt.json --compact
+python certify.py examples/c4_boundary_enforced_receipt.json
+python certify.py examples/c4_boundary_enforced_receipt.json --compact
+python certify.py examples/c2_receipt_bearing_receipt.json
+python certify.py examples/c2_receipt_bearing_receipt.json --compact
 python test_certify.py
 ```
 
@@ -75,9 +87,12 @@ COMMERCIAL_ACCESS.md
 ```text
 README.md
 CERTIFICATION_STANDARD.md
+CERTIFICATION_MATRIX.md
 RUN_PROOF.md
 PROJECT_STATUS.md
 RELEASE_NOTES.md
+REVIEWER_BRIEF.md
+SAMPLE_CERTIFICATION_REPORT.md
 ```
 
 ## Executable surfaces
@@ -85,6 +100,8 @@ RELEASE_NOTES.md
 ```text
 certify.py
 examples/c5_cross_boundary_receipt.json
+examples/c4_boundary_enforced_receipt.json
+examples/c2_receipt_bearing_receipt.json
 test_certify.py
 requirements.txt
 .github/workflows/proof.yml
@@ -122,10 +139,13 @@ The v0.1 surface is coherent when:
 public certification standard is visible
 protected scope is visible before technical depth
 C0-C5 levels are defined
-first C5 receipt is present
+C2, C4, and C5 public-safe receipts are present
 validator is runnable
 tests are present
 workflow is present
+certification matrix is present
+reviewer brief is present
+sample report is present
 no customer-specific certification material is present
 no private runtime law is present
 ```
