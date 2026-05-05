@@ -4,8 +4,9 @@
 ![Open Source](https://img.shields.io/badge/open_source-no-red)
 ![Owner](https://img.shields.io/badge/owner-Samantha_Revita_%2B_Terry_Snyder-purple)
 ![System](https://img.shields.io/badge/system-Elyria_Systems--VA-cyan)
-![Core](https://img.shields.io/badge/core-certified_execution-green)
-[![Elyria Certified Execution Proof](https://github.com/Kamanaka5502/elyria-certified-execution/actions/workflows/proof.yml/badge.svg)](https://github.com/Kamanaka5502/elyria-certified-execution/actions/workflows/proof.yml)
+![15D](https://img.shields.io/badge/15D-standing_geometry-0f172a)
+![Certification](https://img.shields.io/badge/certification-consequence_bearing_execution-gold)
+![Proof](https://img.shields.io/badge/proof-receipt_%2B_replay-green)
 
 Built by **Elyria Systems — VA**.
 
@@ -13,142 +14,129 @@ Copyright (c) 2026 **Samantha Revita** and **Terry Snyder**. All rights reserved
 
 This repository is a **protected public proof surface**. It is **not open source**.
 
-![Elyria Certified Execution](assets/elyria_certified_execution_orbital_surface.svg)
+![Elyria Certified Execution 15D Hero](assets/certified_execution_15d_hero.svg)
 
 ## What this is
 
-Elyria Certified Execution is a public certification standard for consequence-bearing AI execution.
+Elyria Certified Execution is a public-safe certification surface for consequence-bearing AI execution.
 
-It defines what must be proven before an AI action, agent action, tool call, transfer, recommendation, or automated consequence can be treated as governed execution.
+It defines the public distinction between an AI action that appears valid and an AI action that is certified to bind consequence under current standing.
 
-It is not a compliance checklist, dashboard, post-event audit log, risk score, or policy wrapper.
+The point is not whether a system generated, routed, approved, or logged an action.
 
-It certifies whether consequence-bearing execution is:
+The point is whether that action had standing when consequence became real.
 
-```text
-admitted
-bounded
-receipt-bearing
-replay-verifiable
-fail-closed
-admissible at the boundary where it binds
-```
-
-## Runnable public proof
-
-The first admitted executable surface is a public-safe C5 cross-boundary certification validator.
-
-Run:
-
-```bash
-python certify.py examples/c5_cross_boundary_receipt.json
-python certify.py examples/c5_cross_boundary_receipt.json --compact
-python test_certify.py
-```
-
-Expected certification level:
+## Core claim
 
 ```text
-C5 — Cross-Boundary Certified Execution
+Certified execution means consequence was admissible when it bound.
 ```
 
-## Core rule
-
-A system is not certified because it has policies, logs, controls, or approvals.
-
-A system is certified only if consequence-bearing actions are admitted, bounded, receipt-bearing, replayable, and fail-closed at the boundary where they bind.
-
-## Certification formula
+A system can be:
 
 ```text
-CertifiedExecution =
-  BoundaryStanding
-  AND AuthorityProof
-  AND CorridorProof
-  AND ReceiptIntegrity
-  AND ReplayVerification
-  AND FailClosedBehavior
+authenticated
+policy-aligned
+workflow-complete
+semantically coherent
+technically executable
 ```
 
-## Certification levels
+and still fail certified execution if current standing does not hold.
+
+## Public 15D standing geometry
+
+This repository uses **15D standing geometry** as a public category marker for certification.
+
+It names the visible dimensions used to evaluate consequence-bearing standing without exposing private runtime law, production thresholds, protected evaluator logic, customer corridors, private schemas, or deployment-sensitive machinery.
 
 ```text
-C0 — Claim Only
-System asserts governance but provides no enforceable proof.
-
-C1 — Logged Execution
-System records actions after they occur.
-
-C2 — Receipt-Bearing Execution
-System emits structured receipts for decisions/actions.
-
-C3 — Replay-Verifiable Execution
-Receipts can be replayed under the same state/law/input conditions.
-
-C4 — Boundary-Enforced Execution
-Actions are admitted or refused before consequence binds.
-
-C5 — Cross-Boundary Certified Execution
-Execution remains admissible across organizations, agents, data corridors, authority domains, and transfer relations.
+authority · custody · evidence · state · policy
+continuity · revocation · risk · capacity · failure behavior
+receipt basis · replay basis · thermo-standing · corridor standing · standing decay
 ```
 
-## Proof requirements
+Public rule:
 
 ```text
-1. Standing Proof
-The proposed consequence had standing at bind-time.
-
-2. Authority Proof
-The actor, system, or agent had valid current authority.
-
-3. Corridor Proof
-If consequence crossed a boundary, the transfer relation itself had standing.
-
-4. Receipt + Replay Proof
-The decision produced deterministic evidence that can be replayed.
-
-5. Fail-Closed Proof
-When standing failed, the system narrowed, escalated, refused, halted, quarantined, or rebounded.
+Show the geometry.
+Do not disclose the machinery.
 ```
 
-## Related public surfaces
+## Certification relation
 
 ```text
-Elyria-Q Standing Diagnostics
-Corridor Standing Physics
-LLM Coherence Control Plane
-Agentic Chip Benchmark
+C2 proves evidence exists.
+C3 proves evidence can replay.
+C4 proves consequence is controlled before binding.
+C5 proves the boundary relation itself remains admissible across domains.
 ```
 
-## Protection boundary
+This is a public-safe certification ladder, not a disclosure of private certification methodology.
+
+## Boundary rule
+
+```text
+No consequence-bearing AI action is certified unless standing resolves before consequence binds.
+```
+
+Only an admitted action may bind consequence.
+
+If standing is incomplete, stale, revoked, non-replayable, overburdened, outside corridor, or unsupported by current state, the consequence is not certified.
+
+## Outcome grammar
+
+```text
+EXECUTE
+REFUSE
+ESCALATE
+HALT
+QUARANTINE
+REVOKE
+```
+
+Only `EXECUTE` may support certified consequence binding.
+
+All other outcomes fail closed and preserve receipt/replay evidence.
+
+## What this is not
+
+This is not:
+
+```text
+a dashboard
+a compliance checklist
+a generic AI governance label
+a monitoring layer
+a post-event audit tool
+a trust badge without enforcement basis
+```
+
+Those surfaces may provide evidence, but they do not certify consequence-bearing execution by themselves.
+
+## Protected boundary
 
 This repository intentionally excludes:
 
 ```text
 private runtime law
 protected enforcement internals
-private certification methodology
-customer-specific certification reports
-private law bundles
-production deployment architecture
-NDA-bound formal proofs
-commercial pilot terms
-private Veritas Aegis lineage materials
-internal Elyria Systems — VA architecture
-```
-
-## License posture
-
-```text
-Owner: Samantha Revita + Terry Snyder
-System: Elyria Systems — VA
-License posture: All rights reserved / protected public proof surface
-Open-source status: Not open source
-Production use: Not authorized without written agreement
-Commercial use: Not authorized without written agreement
-Derivative use: Not authorized without written agreement
+customer-specific corridors
+customer policies
+production adapters
+private evaluator algorithms
+private schemas
+receipt-generation internals
+replay-verification internals
+protected runtime substrate
+commercial certification reports
+deployment-sensitive architecture
 ```
 
 ## Category statement
 
-Elyria Certified Execution is a protected public proof surface for certification of consequence-bearing AI execution across standing, authority, corridor integrity, receipt/replay, and fail-closed control at the boundary where actions bind.
+Elyria Certified Execution defines a public-safe certification surface for consequence-bearing AI execution.
+
+Standing is geometry, not permission.
+
+Certification is replayable proof that consequence was admissible across the governing geometry when it bound.
